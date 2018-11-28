@@ -3,17 +3,18 @@
  import System.Random
  import Data.Set
  import Data.Char (ord)
+ import Data.Emoji
 
  main :: IO()
  main = do
 	opc <- usuario
 	menu (opc)
-	putStrLn "ADIOS"
+	putStrLn "Bye Bye! \129303 \129303 \129303"
 
 --Imprime en pantalla las instruccion del juego
  instruccion :: IO()
  instruccion = do
-	putStrLn "INSTRUCIIONES DEL JUEGO\nSe proyectaran una seria de emojis y ustedes debe decidir que pelicula es\n\nPresione enter para continuar"
+	putStrLn "INSTRUCIIONES DEL JUEGO\nAparecerán emojis que describan una película, tu tienes que escribir el nombre de la película.\nCada respuesta incorrecta te quita una vida, si la respueata es correcta tu score aumentara.\nObten tantos puntos puedas emojiretador  \128074 \128074 \128074"
 	espera<- getLine
 	putStr ""
 
@@ -45,7 +46,7 @@
 --Regresa un numero ingresado por el usuario
  usuario :: IO(Int)
  usuario = do
-	putStrLn "-----MENÚ-----\n 1)Jugar\n 2)Instrucciones\n 3)Salir"
+	putStrLn "-----MENÚ-----\n 1)Jugar \127918 \n 2)Instrucciones \128221 \n 3)Salir \10060"
 	coman <- getLine 
 	--Nos aseguramos que la cadena ingresada por el usuario sea un numero
 	case readMaybe coman :: Maybe Int of
@@ -70,7 +71,7 @@
 --usuario decida deternerlo.
  jugar :: Int -> Int -> IO()
  jugar 0 y = do
-	putStr "GAME OVER\nFinal Score: "
+	putStr "GAME OVER \128128 \nFinal Score: "
 	putStrLn (show y)
 	putStrLn ""
  jugar x y = do
