@@ -28,3 +28,4 @@ En el cuerpo del proyecto el usuario tiene 3 opciones: jugar, instrucciones y sa
 
 Notas:
 -Si los emojis no se ven quite los comentarios del archivo Paliculas.hs
+-Los únicos archivos a considerar deberán ser los del directorio </Final> ahí estan los únicos archivos necesarios para que el 	programa funcione correctamente.
