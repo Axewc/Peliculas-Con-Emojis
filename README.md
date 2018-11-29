@@ -27,7 +27,7 @@ En el cuerpo del proyecto el usuario tiene 3 opciones: jugar, instrucciones y sa
 	hasta que se le acaben las vidas el juego sigue y al final se imprime el score.
 
 Notas:
-Si los emojis no se ven quite los comentarios del archivo Peliculas.hs
+Si los emojis no se ven quite los comentarios de "import Data.Emoji" en el archivo Juego.hs
 -
 Los únicos archivos a considerar deberán ser los del directorio "/Final" ahí estan los únicos archivos necesarios para que el 	programa funcione correctamente.
 -
