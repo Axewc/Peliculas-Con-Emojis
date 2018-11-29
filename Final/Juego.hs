@@ -1,10 +1,12 @@
+
  import Pelicula
  import Text.Read
  import System.Random
  import Data.Set
  import Data.Char (ord)
- import Data.Emoji
+ --import Data.Emoji
 
+ --Adivina la pelicula
  main :: IO()
  main = do
 	opc <- usuario
@@ -14,7 +16,7 @@
 --Imprime en pantalla las instruccion del juego
  instruccion :: IO()
  instruccion = do
-	putStrLn "INSTRUCIIONES DEL JUEGO\nAparecerán emojis que describan una película, tu tienes que escribir el nombre de la película.\nCada respuesta incorrecta te quita una vida, si la respueata es correcta tu score aumentara.\nObten tantos puntos puedas emojiretador  \128074 \128074 \128074"
+	putStrLn "Adivina la pelicula basandote en los emojis que aparecen en pantalla.\nTendrás sólo 5 vidas, junta tantos puntos como puedas \128074 \128074 \128074\n\nPresiona enter para continuar"
 	espera<- getLine
 	putStr ""
 
@@ -29,14 +31,15 @@
 	menu z
 	putStr ""
 --Imprime las instrucciones
- menu 2 = do 
+ menu 2 = do
+ 	putStrLn ""
 	instruccion
 	z <- usuario
 	menu z
 	putStr ""
 --Salir
  menu 3 = do
-	putStr ""
+	putStrLn ""
 --Si el usuario ingresa un numero invalido
  menu x = do
 	putStrLn "No es una opción valida del menú"
@@ -80,7 +83,7 @@
 	putStrLn (show y)
 	--Selecciona la pelicual de la base de datos
 	z <- selecc
-	putStrLn "¿Cúal es el nombre de la pelicula"
+	putStrLn "¿Cúal es el nombre de la pelicula?"
 	putStrLn (snd z)
 	respuesta <- getLine
 	--Compara respuesta
@@ -93,7 +96,7 @@
 					putStrLn ""
 					jugar x (y+1)
 					putStr ""
-				else putStrLn "Saliendo"
+				else putStrLn "Saliendo...\n"
 		else do
 			putStrLn "\10060" 
 			continuar <- seguir
@@ -103,7 +106,7 @@
 					putStrLn ""
 					jugar (x-1) y
 					putStr ""
-				else putStrLn "Saliendo"
+				else putStrLn "Saliendo...\n"
 	putStr ""
 
 --Pregunta al usuario si desea continuar jugando
