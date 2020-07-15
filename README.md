@@ -1,4 +1,4 @@
-# Practica_6
+# Practica 6: Juego de películas con emojis
 Casas Espinosa Axel 316218849
 Rivera Garcia Ignacio 316284457
 Santiago Carrillo Braulio Aaron  316272560
